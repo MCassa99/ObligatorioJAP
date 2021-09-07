@@ -1,6 +1,31 @@
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
+const loginButton = document.getElementById("login-submit");
 
+function pruebaemail (valor){
+	re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+	if(!re.exec(valor)){
+		return true;
+	}
+	else {
+        return false;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function(e){
+    loginButton.addEventListener("click", (e) => {
+        const mail = document.getElementById("inputEmail").value;
+        const pass = document.getElementById("inputPassword").value;
+
+        if(pruebaemail(mail) != true && pass != "")
+        {
+            alert("Logeo Exitoso!");
+            window.location="inicio.html";
+        } else {
+            alert("Error en Logeo. Verifique E-Mail y Contraseña");
+            location.reload();
+        }
+        
+    });
 });
