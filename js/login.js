@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         if(pruebaemail(mail) != true && pass != "")
         {
-            alert("Logeo Exitoso!");
+            localStorage.setItem("username", mail);
             window.location="inicio.html";
         } else {
-            alert("Error en Logeo. Verifique E-Mail y Contraseña");
-            location.reload();
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("resultado").innerHTML += "Error en Logeo. Verifique E-Mail y Contraseña";
         }
         
     });
