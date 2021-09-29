@@ -1,12 +1,14 @@
-var ProductsInfo = [];
+var productsInfo = [];
 var Comments = [];
-var relatedProducts = [];
+var relatedP = [];
 var cantidad = 0;
 var contCommentarios = 0;
 var date = new Date();
 var active = new Boolean(true);
 var addingComment = new Boolean(false);
-
+var firstRelated = new Boolean(true);
+var Producto = localStorage.getItem('idProducto');
+let related = "";
 
 function showProductsInfo(array){
     let info = "";
@@ -39,11 +41,24 @@ function showProductsInfo(array){
     document.getElementById("imagenes").innerHTML = imgs;
     }
 
-function showRelatedProducts(info){
+function showRelatedProducts(array){
 
-    let p = document.createElement("p");
-    var add_rProducts = document.getElementById("RelatedProducts");
-    info.relatedProducts.forEach(rProduct => add_rProducts.append(p));    
+    related += `
+    <div class="card" style="max-width:30%; max-height:30%;">
+        <a href="product-info.html" onclick="localStorage.setItem('idProducto',`+array.id+`)">
+        <img class="card-img-top2 img-fluid" src="`+ array.imgSrc +`" alt="Imagen NO Disponible">
+        <div class="card-body">
+            <h3 class="card-title"><b>`+ array.name +`</b></h3>
+            <div class="card-text">
+                <p class="precio">`+ array.cost +` `+ array.currency +`</p>
+                <p>Vendidos: `+ array.soldCount +`</p>
+            </div>
+        </div>
+        </a>
+    </div>
+    `
+
+    document.getElementById("RelatedProducts").innerHTML = related;
 }
 
 function showComments(array){
@@ -120,12 +135,22 @@ function score(array){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
+    getJSONData(PRODUCT_INFO_URL+Producto+".json").then(function(resultObj){
         if (resultObj.status === "ok")
         {
-            ProductsInfo = resultObj.data;
-            showProductsInfo(ProductsInfo);
-            showRelatedProducts(ProductsInfo);
+            productsInfo = resultObj.data;
+            showProductsInfo(productsInfo);
+            
+            for(let i=0; i<productsInfo.relatedProducts.length; i++){
+                getJSONData(PRODUCTS_URL).then(function(resultObj){
+                    if (resultObj.status === "ok")
+                    {
+                        relatedP = resultObj.data;
+                        showRelatedProducts(relatedP[productsInfo.relatedProducts[i]]);
+                    }
+                })
+            }
+            
         }
     })
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){

@@ -221,7 +221,6 @@ a.custom-card:hover {
   max-width: 75%;
 }
 
-
 /* Configuracion de Estrellas */
 .rate {
   float: left;
@@ -261,3 +260,10 @@ a.custom-card:hover {
   color: #c59b08;
 }
 /*------------------------------------------*/
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}

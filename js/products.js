@@ -14,7 +14,8 @@ function showCarsList(array){
 
             htmlContentToAppend += `
             
-                <div class="card h-auto" style="min-width: 20rem; margin-top: 1rem; id="product`+i+`">
+                <div class="card h-auto" style="min-width: 20rem; margin-top: 1rem;">
+                    <a href="product-info.html" onclick="localStorage.setItem('idProducto',`+product.id+`)">
                     <img class="card-img-top2 img-fluid" src="`+ product.imgSrc +`" alt="Imagen NO Disponible">
                     <div class="card-body">
                     <h3 class="card-title"><b>`+ product.name +`</b></h3>
@@ -25,6 +26,7 @@ function showCarsList(array){
                     <p><button class="btn btn-primary mx-auto d-block" id="cart-auto-`+i+`">Agregar al Carrito</button></p>
                     </div>
                     </div>
+                    </a>
                 </div>
             
             `
@@ -33,6 +35,7 @@ function showCarsList(array){
     }
     document.getElementById("cat-list-container").innerHTML += "</div>";
 }
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
