@@ -6,7 +6,7 @@
         "currency": "USD",
         "imgSrc": "img/prod1.jpg",
         "soldCount": 14,
-        "id": "1"
+        "id": "chevrolet_onix_joy"
     },
     {
         "name": "Peugeot 208",
@@ -15,7 +15,7 @@
         "currency": "USD",
         "imgSrc": "img/prod4.jpg",
         "soldCount": 17,
-        "id": "2"   
+        "id": "peugeot_208"   
     },
     {
         "name": "Fiat Way",
@@ -24,7 +24,7 @@
         "currency": "USD",
         "imgSrc": "img/prod2.jpg",
         "soldCount": 52,
-        "id": "3"  
+        "id": "fiat_way"  
     },
     {
         "name": "Suzuki Celerio",
@@ -33,7 +33,7 @@
         "currency": "USD",
         "imgSrc": "img/prod3.jpg",
         "soldCount": 25,
-        "id": "4"  
+        "id": "suzuki_celerio"  
     }
  
 ]
