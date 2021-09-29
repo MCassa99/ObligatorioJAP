@@ -4,7 +4,7 @@ var minCount = undefined;
 var maxCount = undefined;
 
 function showCarsList(array){
-    let htmlContentToAppend = `<div class="card-deck">`;
+    let htmlContentToAppend = `<div class="card-deck style="max-width: 50rem !important;">`;
 
     for (let i = 0; i < array.length; i++){
         let product = array[i];
@@ -14,15 +14,15 @@ function showCarsList(array){
 
             htmlContentToAppend += `
             
-                <div class="card mb-3 style="max-width: 35%; min-width: 30%; margin: 1.0rem;"">
-                    <img class="card-img-top img-fluid" src="`+ product.imgSrc +`" alt="Imagen NO Disponible">
+                <div class="card h-auto" style="min-width: 20rem; margin-top: 1rem; id="product`+i+`">
+                    <img class="card-img-top2 img-fluid" src="`+ product.imgSrc +`" alt="Imagen NO Disponible">
                     <div class="card-body">
                     <h3 class="card-title"><b>`+ product.name +`</b></h3>
                     <div class="card-text">
                     <p>`+ product.description + `</p>
                     <p class="precio">`+ product.cost +` `+ product.currency +`</p>
                     <p>Vendidos: `+ product.soldCount +`</p>
-                    <p><button id="cart-auto-`+i+`">Agregar al Carrito</button></p>
+                    <p><button class="btn btn-primary mx-auto d-block" id="cart-auto-`+i+`">Agregar al Carrito</button></p>
                     </div>
                     </div>
                 </div>
