@@ -7,7 +7,7 @@ var date = new Date();
 var active = new Boolean(true);
 var addingComment = new Boolean(false);
 var firstRelated = new Boolean(true);
-var Producto = localStorage.getItem('idProducto');
+var producto = localStorage.getItem('idProducto');
 let related = "";
 
 function showProductsInfo(array){
@@ -45,7 +45,7 @@ function showRelatedProducts(array){
 
     related += `
     <div class="card" style="max-width:30%; max-height:30%;">
-        <a href="product-info.html" onclick="localStorage.setItem('idProducto',`+array.id+`)">
+        <a href="product-info.html" onclick="localStorage.setItem('idProducto','`+array.id+`')">
         <img class="card-img-top2 img-fluid" src="`+ array.imgSrc +`" alt="Imagen NO Disponible">
         <div class="card-body">
             <h3 class="card-title"><b>`+ array.name +`</b></h3>
@@ -135,7 +135,7 @@ function score(array){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCT_INFO_URL+Producto+".json").then(function(resultObj){
+    getJSONData(PRODUCT_INFO_URL+producto+".json").then(function(resultObj){
         if (resultObj.status === "ok")
         {
             productsInfo = resultObj.data;

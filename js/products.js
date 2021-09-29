@@ -13,22 +13,20 @@ function showCarsList(array){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))){
 
             htmlContentToAppend += `
-            
                 <div class="card h-auto" style="min-width: 20rem; margin-top: 1rem;">
-                    <a href="product-info.html" onclick="localStorage.setItem('idProducto',`+product.id+`)">
+                    <a href="product-info.html" onclick="localStorage.setItem('idProducto','`+product.id+`')">
                     <img class="card-img-top2 img-fluid" src="`+ product.imgSrc +`" alt="Imagen NO Disponible">
-                    <div class="card-body">
-                    <h3 class="card-title"><b>`+ product.name +`</b></h3>
-                    <div class="card-text">
-                    <p>`+ product.description + `</p>
-                    <p class="precio">`+ product.cost +` `+ product.currency +`</p>
-                    <p>Vendidos: `+ product.soldCount +`</p>
-                    <p><button class="btn btn-primary mx-auto d-block" id="cart-auto-`+i+`">Agregar al Carrito</button></p>
-                    </div>
-                    </div>
+                        <div class="card-body">
+                        <h3 class="card-title"><b>`+ product.name +`</b></h3>
+                            <div class="card-text">
+                            <p>`+ product.description + `</p>
+                            <p class="precio">`+ product.cost +` `+ product.currency +`</p>
+                            <p>Vendidos: `+ product.soldCount +`</p>
+                            <p><button class="btn btn-primary mx-auto d-block" id="cart-auto-`+i+`">Agregar al Carrito</button></p>
+                            </div>
+                        </div>
                     </a>
                 </div>
-            
             `
         }
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
