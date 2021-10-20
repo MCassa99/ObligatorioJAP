@@ -1,0 +1,118 @@
+{
+    "countries": [
+      {
+        "name_en": "Argentina",
+        "name_es": "Argentina",
+        "dial_code": "+54",
+        "code": "A"
+      },
+      {
+        "name_en": "Bolivia",
+        "name_es": "Bolivia",
+        "dial_code": "+591",
+        "code": "C"
+      },
+      {
+        "name_en": "Brazil",
+        "name_es": "Brasil",
+        "dial_code": "+55",
+        "code": "B"
+      },
+      {
+        "name_en": "Canada",
+        "name_es": "Canadá",
+        "dial_code": "+1",
+        "code": "C"
+      },
+      {
+        "name_en": "Chile",
+        "name_es": "Chile",
+        "dial_code": "+56",
+        "code": "B"
+      },
+      {
+        "name_en": "China",
+        "name_es": "China",
+        "dial_code": "+86",
+        "code": "D"
+      },
+      {
+        "name_en": "Colombia",
+        "name_es": "Colombia",
+        "dial_code": "+57",
+        "code": "C"
+      },
+      {
+        "name_en": "Costa Rica",
+        "name_es": "Costa Rica",
+        "dial_code": "+506",
+        "code": "C"
+      },
+      {
+        "name_en": "Ecuador",
+        "name_es": "Ecuador",
+        "dial_code": "+593",
+        "code": "C"
+      },
+      {
+        "name_en": "France",
+        "name_es": "Francia",
+        "dial_code": "+33",
+        "code": "D"
+      },
+      {
+        "name_en": "Italy",
+        "name_es": "Italia",
+        "dial_code": "+39",
+        "code": "D"
+      },
+      {
+        "name_en": "New Zealand",
+        "name_es": "Nueva Zelanda",
+        "dial_code": "+64",
+        "code": "E"
+      },
+      {
+        "name_en": "Nicaragua",
+        "name_es": "Nicaragua",
+        "dial_code": "+505",
+        "code": "C"
+      },
+      {
+        "name_en": "Paraguay",
+        "name_es": "Paraguay",
+        "dial_code": "+595",
+        "code": "B"
+      },
+      {
+        "name_en": "Peru",
+        "name_es": "Perú",
+        "dial_code": "+51",
+        "code": "C"
+      },
+      {
+        "name_en": "United Kingdom",
+        "name_es": "Reino Unido",
+        "dial_code": "+44",
+        "code": "D"
+      },
+      {
+        "name_en": "United States",
+        "name_es": "Estados Unidos",
+        "dial_code": "+1",
+        "code": "C"
+      },
+      {
+        "name_en": "Uruguay",
+        "name_es": "Uruguay",
+        "dial_code": "+598",
+        "code": "F"
+      },
+      {
+        "name_en": "Venezuela, Bolivarian Republic of",
+        "name_es": "Venezuela",
+        "dial_code": "+58",
+        "code": "C"
+      }
+    ]
+  }
